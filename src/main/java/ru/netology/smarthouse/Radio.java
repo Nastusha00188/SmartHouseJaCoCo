@@ -1,8 +1,8 @@
 package ru.netology.smarthouse;
 
 public class Radio {
-  private int numberOfStation;
-  private int volume;
+    private int numberOfStation;
+    private int volume;
 
     public int getNumberOfStation() {
         return numberOfStation;
@@ -16,7 +16,7 @@ public class Radio {
             numberOfStation = 0;
         }
         if (numberOfStation > 0) {
-            numberOfStation = numberOfStation ++;
+            numberOfStation = numberOfStation++;
         }
 
         this.numberOfStation = numberOfStation;

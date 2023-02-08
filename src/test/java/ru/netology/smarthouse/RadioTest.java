@@ -40,6 +40,7 @@ public class RadioTest {
         int actual = radio.getNumberOfStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void findNumberOfStationBelowMin() {
         Radio radio = new Radio();
@@ -58,6 +59,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void findMinVolume() {
         Radio radio = new Radio();
@@ -85,6 +87,7 @@ public class RadioTest {
         int actual = radio.getVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void findVolumeBelowMin() {
         Radio radio = new Radio();
