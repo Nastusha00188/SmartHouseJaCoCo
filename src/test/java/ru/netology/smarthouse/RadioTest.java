@@ -121,8 +121,8 @@ public class RadioTest {
     @Test
     public void findMaxVolume() {
         Radio radio = new Radio();
-        radio.setVolume(10);
-        int expected = 10;
+        radio.setVolume(100);
+        int expected = 100;
         int actual = radio.getVolume();
         Assertions.assertEquals(expected, actual);
 
@@ -131,8 +131,8 @@ public class RadioTest {
     @Test
     public void findVolumeAboveMax() {
         Radio radio = new Radio();
-        radio.setVolume(11);
-        int expected = 10;
+        radio.setVolume(101);
+        int expected = 100;
         int actual = radio.getVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -147,11 +147,21 @@ public class RadioTest {
     }
 
     @Test
+    public void louderVolume() {
+        Radio radio = new Radio();
+        radio.setVolume(99);
+        radio.louder();
+        int expected = 100;
+        int actual = radio.getVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void higherThenMaxVolume() {
         Radio radio = new Radio();
-        radio.setVolume(10);
+        radio.setVolume(101);
         radio.louder();
-        int expected = 10;
+        int expected = 100;
         int actual = radio.getVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -179,9 +189,9 @@ public class RadioTest {
     @Test
     public void quieterVolume() {
         Radio radio = new Radio();
-        radio.setVolume(10);
+        radio.setVolume(100);
         radio.quieter();
-        int expected = 9;
+        int expected = 99;
         int actual = radio.getVolume();
         Assertions.assertEquals(expected, actual);
     }
