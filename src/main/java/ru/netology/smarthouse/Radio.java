@@ -34,15 +34,6 @@ public class Radio {
         }
     }
 
-    public void number() {
-        if (numberOfStation > 9) {
-            return;
-        }
-        if (numberOfStation < 0) {
-            return;
-        }
-    }
-
     public int getVolume() {
         return volume;
     }
